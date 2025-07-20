@@ -3,9 +3,9 @@ use std::marker::PhantomData;
 use std::fmt::{self, Display, Formatter};
 
 pub struct Node<T> {
-    value : T,
-    next : Option<NonNull<Node<T>>>,
-    prev : Option<NonNull<Node<T>>>,
+    pub value : T,
+    pub next : Option<NonNull<Node<T>>>,
+    pub prev : Option<NonNull<Node<T>>>,
 }
 
 impl<T> Node<T> {
@@ -19,9 +19,9 @@ impl<T> Node<T> {
 }
 
 pub struct LinkedList<T> {
-    length : u32,
-    head : Option<NonNull<Node<T>>>,
-    tail : Option<NonNull<Node<T>>>,
+    pub length : u32,
+    pub head : Option<NonNull<Node<T>>>,
+    pub tail : Option<NonNull<Node<T>>>,
     marker : PhantomData<Box<Node<T>>>,
 }
 
